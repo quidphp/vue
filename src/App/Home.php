@@ -15,5 +15,14 @@ class Home extends Site\App\Home
     protected static array $config = [
         'vue'=>'Home'
     ];
+
+
+    // outputData
+    final protected function outputData():array
+    {
+        return [
+            'test'=>'ok!!!'
+        ];
+    }
 }
 ?>

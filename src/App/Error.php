@@ -15,5 +15,12 @@ class Error extends Site\App\Error
     protected static array $config = [
         'vue'=>'Error'
     ];
+
+
+    // outputData
+    final protected function outputData():array
+    {
+        return [];
+    }
 }
 ?>

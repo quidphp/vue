@@ -9,15 +9,11 @@ use Quid\Lemur;
 // trait utilisé par toutes les routes qui génère une interface (donc pas de formulaire), génère toute l'exportation de tableau de base
 trait _template
 {
-    // trait
-    use Lemur\Route\_browscap;
-
-
     // config
     protected static array $configTemplate = [
         'vue'=>null,
         'debugVue'=>true,
-        'debugPhp'=>true
+        'debugPhp'=>false
     ];
 
 
@@ -52,7 +48,6 @@ trait _template
         $attr['data-state'] = $this->getState();
         $attr[] = '#app';
 
-        $r .= Html::div($this->browscap(),'browscap');
         $r .= Html::div(null,$attr);
         $r .= $this->docClose();
 
