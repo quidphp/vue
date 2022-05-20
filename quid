@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
-// index file for booting the application and Cms via an HTTP request
+// file for booting the application and Cms via CLI
 
 (function() {
-    http_response_code(500);
-    $config = require dirname(__DIR__).'/env.php';
-    $scheme = $_SERVER['REQUEST_SCHEME'] ?? ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')? 'https':'http');
-    $host = $_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST'];
-    $schemeHost = $scheme.'://'.$host;
-    $envType = array_search($schemeHost,$config['schemeHost'],true);
+    $argv = $_SERVER['argv'] ?? null;
+
+    if(!empty($argv))
+    {
+        $config = require __DIR__.'/env.php';
+        $arg = explode(':',$argv[1] ?? '/');
+        $envType = $arg[1] ?? $config['cliEnvType'] ?? null;
+    }
 
     if(!empty($envType))
     {
@@ -26,6 +28,9 @@ declare(strict_types=1);
     {
         $boot = str_replace('[vendor]',$vendor,$boot);
         require_once $vendor.'/autoload.php';
+        $config['request']['path'] = $arg[0];
+        $config['request']['schemeHost'] = $config['schemeHost'][$envType];
+        $config['request']['argv'] = $argv;
         (require $boot)($config);
     }
 })();

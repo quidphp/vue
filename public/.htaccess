@@ -1,3 +1,5 @@
+# simple apache directive file, requires mod_rewrite
+
 Options -Indexes +FollowSymLinks
 
 <IfModule mod_rewrite.c>

@@ -8,6 +8,4 @@ Thumbs.db
 /env.php
 !/public/index.php
 !/public/.htaccess
-node_modules
-/package-lock.json
-/mix-manifest.json
+!/storage/public
