@@ -1,16 +1,10 @@
 // import
 import { createApp } from "vue";
 import { createStore } from "vuex";
-import * as Quid from 'quidphp-navigation';
 import StoreConfig from './store.js';
 import ComponentsRegister from './register.js';
-import VueMixin from './mixin.js';
+import "./global.js";
 import App from "./app.vue";
-
-// global
-window['Quid'] = Quid;
-window['d'] = Quid.Shortcut.d;
-window['VueMixin'] = VueMixin;
 
 // createApp
 const app = createApp(App);
