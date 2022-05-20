@@ -1,6 +1,6 @@
 // mixin
 
-// vueMixin
+// export
 export default {
     computed: {
         session() {

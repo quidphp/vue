@@ -1,4 +1,6 @@
-// storeConfig
+// store
+
+// export
 export default (state) => {
     state.loading = false;
     if (state.debug === true) {
