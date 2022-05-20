@@ -3,7 +3,6 @@ declare(strict_types=1);
 namespace Project\App;
 use Quid\Base;
 use Quid\Base\Html;
-use Quid\Lemur;
 
 // _template
 // trait utilisé par toutes les routes qui génère une interface (donc pas de formulaire), génère toute l'exportation de tableau de base
