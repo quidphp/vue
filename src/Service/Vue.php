@@ -6,7 +6,6 @@ declare(strict_types=1);
  * Auteur: Pierre-Philippe Emond | emondpph@gmail.com
  * Ce fichier de programmation est la propriété de La Haute Voltige.
  */
-
 namespace Project\Service;
 use Quid\Main;
 use Quid\Routing;

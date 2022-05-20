@@ -6,9 +6,7 @@ declare(strict_types=1);
  * Auteur: Pierre-Philippe Emond | emondpph@gmail.com
  * Ce fichier de programmation est la propriété de La Haute Voltige.
  */
-
 namespace Project\App;
-use Project;
 use Quid\Base;
 use Quid\Base\Html;
 use Quid\Lemur;
