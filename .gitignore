@@ -1,11 +1,11 @@
 .DS_Store
 ._*,
 Thumbs.db
-/composer.lock
+node_modules
+/mix-manifest.json
 /vendor/*
 /storage/*
 /public/*
 /env.php
 !/public/index.php
 !/public/.htaccess
-!/storage/public

@@ -7,7 +7,13 @@ use Quid\Site;
 // class for the error route of the app
 class Error extends Site\App\Error
 {
+    // trait
+    use _template;
+
+
     // config
-    protected static array $config = [];
+    protected static array $config = [
+        'vue'=>'Error'
+    ];
 }
 ?>

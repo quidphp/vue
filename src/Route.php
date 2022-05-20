@@ -8,6 +8,21 @@ use Quid\Site;
 abstract class Route extends Site\Route
 {
     // config
-    protected static array $config = [];
+    protected static array $config = [
+        '@app'=>[
+            'jsInit'=>null,
+            'docOpen'=>[
+                'head'=>[
+                    'css'=>[
+                        'type'=>null],
+                    'js'=>[
+                        'type'=>null,
+                        'component'=>null]]],
+            '@dev'=>[
+                'navigation'=>true]],
+        '@cms'=>[
+            '@dev'=>[
+                'navigation'=>true]]
+    ];
 }
 ?>

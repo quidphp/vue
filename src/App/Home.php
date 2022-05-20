@@ -8,19 +8,13 @@ use Quid\Site;
 // class for the home route of the app
 class Home extends Site\App\Home
 {
+    // trait
+    use _template;
+
+
     // config
-    protected static array $config = [];
-
-
-    // trigger
-    final public function trigger()
-    {
-        $r = $this->docOpen();
-        $html = Html::h1('Hello World');
-        $r .= Html::div($html,'route-wrap');
-        $r .= $this->docClose();
-
-        return $r;
-    }
+    protected static array $config = [
+        'vue'=>'Home'
+    ];
 }
 ?>

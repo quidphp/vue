@@ -15,6 +15,15 @@ class Boot extends Site\Boot
         'lang'=>['en'],
         'service'=>[
             'mailer'=>[Core\Service\PhpMailer::class,['host'=>'smtp.project.com','port'=>587,'username'=>'no-reply@project.com','password'=>'','name'=>'Project']]],
+        '@app'=>[
+            'compileCss'=>[
+                'app'=>null],
+            'compileJs'=>[
+                'app'=>null],
+            'service'=>[
+                'polyfill'=>null,
+                'navigation'=>null,
+                'vue'=>Service\Vue::class]]
     ];
 
 
