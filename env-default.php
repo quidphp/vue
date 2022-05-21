@@ -13,6 +13,7 @@ return [
     ],
 
     'path'=>[
+        'hot'=>__DIR__.'/hot',
         'public'=>__DIR__.'/public',
         'src'=>__DIR__.'/src',
         'js'=>__DIR__.'/js',

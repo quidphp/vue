@@ -63,7 +63,8 @@ class Vue extends Main\Service
     {
         return [
             'manifest'=>$this->makePath('js/manifest.js'),
-            'app'=>$this->makePath('js/app.js')
+            'app'=>$this->makePath('js/app.js'),
+            'vendor'=>$this->makePath('js/app-vendor.js')
         ];
     }
 }
