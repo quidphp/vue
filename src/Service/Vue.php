@@ -22,28 +22,45 @@ class Vue extends Main\Service
     // isHot
     final protected function isHot():bool
     {
-        $hot = static::boot()->path('hot');
-        return Base\File::is($hot);
+        $return = false;
+        $boot = static::boot();
+
+        if($boot->isDev())
+        {
+            $hot = $boot->path('hot');
+            $return = Base\File::is($hot);
+        }
+
+        return $return;
     }
 
 
     // getHotHost
-    final protected function getHotSchemeHost():string
+    final protected function getHotSchemeHost():?string
     {
-        $hot = static::boot()->path('hot');
-        return Base\File::lineFirst($hot);
+        return $this->cache(__METHOD__,function() {
+            $return = null;
+
+            if($this->isHot())
+            {
+                $hot = static::boot()->path('hot');
+                $schemeHost = Base\File::lineFirst($hot);
+
+                if(!empty($schemeHost) && Base\Uri::is($schemeHost))
+                $return = $schemeHost;
+            }
+
+            return $return;
+        });
     }
 
 
     // makePath
     final protected function makePath(string $return):string
     {
-        if($this->isHot())
-        {
-            $schemeHost = $this->getHotSchemeHost();
-            if(!empty($schemeHost) && Base\Uri::is($schemeHost))
-            $return = $schemeHost.'/public/'.$return;
-        }
+        $schemeHost = $this->getHotSchemeHost();
+        if(!empty($schemeHost))
+        $return = $schemeHost.'/public/'.$return;
 
         return $return;
     }
