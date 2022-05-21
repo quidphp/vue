@@ -35,7 +35,7 @@ class Vue extends Main\Service
     }
 
 
-    // getHotHost
+    // getHotSchemeHost
     final protected function getHotSchemeHost():?string
     {
         return $this->cache(__METHOD__,function() {
