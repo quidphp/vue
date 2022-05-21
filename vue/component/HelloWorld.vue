@@ -27,7 +27,7 @@ h1 {
     }
     
     &.selected {
-        color: pink;
+        color: red;
     }
 }
 

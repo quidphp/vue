@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 namespace Project\Service;
+use Quid\Base;
+use Quid\Core;
 use Quid\Main;
 use Quid\Routing;
 
@@ -10,17 +12,48 @@ class Vue extends Main\Service
 {
     // trait
     use Routing\_service;
+    use Core\_bootAccess;
 
 
     // config
     protected static array $config = [];
 
 
+    // isHot
+    final protected function isHot():bool
+    {
+        $hot = static::boot()->path('hot');
+        return Base\File::is($hot);
+    }
+
+
+    // getHotHost
+    final protected function getHotSchemeHost():string
+    {
+        $hot = static::boot()->path('hot');
+        return Base\File::lineFirst($hot);
+    }
+
+
+    // makePath
+    final protected function makePath(string $return):string
+    {
+        if($this->isHot())
+        {
+            $schemeHost = $this->getHotSchemeHost();
+            if(!empty($schemeHost) && Base\Uri::is($schemeHost))
+            $return = $schemeHost.'/public/'.$return;
+        }
+
+        return $return;
+    }
+
+
     // docOpenCss
     final public function docOpenCss():array
     {
         return [
-            'app-vue'=>'css/app.css'
+            'app-vue'=>$this->makePath('css/app.css')
         ];
     }
 
@@ -29,9 +62,8 @@ class Vue extends Main\Service
     final public function docCloseJs():array
     {
         return [
-            'manifest'=>'js/manifest.js',
-            'app-vendor'=>'js/app-vendor.js',
-            'app'=>'js/app.js'
+            'manifest'=>$this->makePath('js/manifest.js'),
+            'app'=>$this->makePath('js/app.js')
         ];
     }
 }

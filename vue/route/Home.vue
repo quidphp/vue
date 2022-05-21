@@ -11,3 +11,10 @@ export default {
     mixins: [VueMixin]
 }
 </script>
+
+<style lang='scss' scoped>
+h2 {
+    color: green;
+    text-decoration: underline;
+}
+</style>
