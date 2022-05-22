@@ -1,6 +1,6 @@
 // global
 import * as Quid from 'quidphp-navigation';
-import VueMixin from './mixin.js';
+import VueMixin from '*/mixin.js';
 
 // global
 window['Quid'] = Quid;
