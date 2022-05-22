@@ -3,7 +3,7 @@ require('laravel-mix-polyfill');
 
 mix.js('vue/app.js', 'public/js/app.js');
 mix.vue({ version: 3, globalStyles: 'vue/app.scss', extractStyles: 'public/css/app.css', });
-mix.extract(['vue', 'vuex', 'quidphp-navigation'], 'public/js/app-vendor.js');
+mix.extract(['vue', 'vuex', 'quidphp-navigation','quidphp-browser','quidphp-javascript'], 'public/js/app-vendor.js');
 
 if(mix.inProduction())
 mix.polyfill({ enabled: true, useBuiltIns: false });
