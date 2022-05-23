@@ -1,10 +1,10 @@
 // import
 import { createApp } from "vue";
 import { createStore } from "vuex";
-import StoreConfig from '*/store.js';
-import ComponentsRegister from '*/register.js';
-import "*/global.js";
-import App from "*/app.vue";
+import StoreConfig from './store.js';
+import ComponentsRegister from './register.js';
+import "./global.js";
+import App from "./app.vue";
 
 // createApp
 const app = createApp(App);
