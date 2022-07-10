@@ -4,7 +4,7 @@ namespace Project;
 use Quid\Lemur;
 
 // session
-// classe pour représenter la session courante
+// class used to represent the active session
 class Session extends Lemur\Session
 {
     // output

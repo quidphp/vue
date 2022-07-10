@@ -1,13 +1,6 @@
+<!-- component for the error route -->
 <template>
     <InterfaceLayout>
-        <HelloWorld />
-        <h2>Erreur</h2>
-        <a href='/'>Home</a>
+        <h1>Error</h1>
     </InterfaceLayout>
 </template>
-
-<script>
-export default {
-    mixins: [VueMixin]
-}
-</script>

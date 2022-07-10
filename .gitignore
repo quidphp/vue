@@ -1,6 +1,8 @@
 .DS_Store
 ._*,
 Thumbs.db
+/composer.lock
+/package-lock.json
 node_modules
 /mix-manifest.json
 /vendor/*

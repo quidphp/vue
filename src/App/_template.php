@@ -5,7 +5,7 @@ use Quid\Base;
 use Quid\Base\Html;
 
 // _template
-// trait utilisé par toutes les routes qui génère une interface (donc pas de formulaire), génère toute l'exportation de tableau de base
+// trait used by all routes which generate an interface
 trait _template
 {
     // config

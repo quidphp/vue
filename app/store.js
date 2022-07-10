@@ -1,4 +1,5 @@
 // store
+// contains vuex getters and mutations available globally
 
 // export
 export default (state) => {

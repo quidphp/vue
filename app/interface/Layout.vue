@@ -1,3 +1,4 @@
+<!-- component for the common page layout -->
 <template>
     <slot></slot>
 </template>

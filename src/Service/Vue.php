@@ -7,7 +7,7 @@ use Quid\Main;
 use Quid\Routing;
 
 // vue
-// classe en lien avec vue et les chargements des assets front-end
+// class related to vue and the loading of front-end assets
 class Vue extends Main\Service
 {
     // trait

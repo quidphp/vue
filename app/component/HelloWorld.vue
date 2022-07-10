@@ -1,39 +1,14 @@
+<!-- component for a hello world in a h1 tag -->
 <template>
-    <h1 :class="{selected: h1Selected}" @click="clickH1">Hello world</h1>
+    <h1>Hello world</h1>
 </template>
 
 <script>
-export default {
-    data: () => ({
-        h1Selected: false
-    }),
-    
-    methods: {
-        clickH1() {
-            this.h1Selected = true;
-        }
-    }
-}
+export default {}
 </script>
 
 <style lang='scss' scoped>
 h1 {
-    @include transition(color);
-    cursor: pointer;
     color: $color;
-    
-    &:hover {
-        color: green;
-    }
-    
-    &.selected {
-        color: red;
-    }
-}
-
-@include responsive() {
-    h1 {
-        color: yellow;
-    }
 }
 </style>
