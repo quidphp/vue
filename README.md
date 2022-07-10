@@ -46,6 +46,7 @@ $ composer create-project quidphp/vue --prefer-dist
         - *post_max_size* must be larger than *upload_max_filesize*
         - *memory_limit* must be at least 128MB
 - Mysql (>= 8.0) or MariaDB (>= 10.4) database
+- NodeJs LTS version (16)
 - Any modern browser (not Internet Explorer)
 
 ## Dependency
