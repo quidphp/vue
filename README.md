@@ -91,6 +91,10 @@ npm run prod
 Open the project folder in the Command Line. You may now submit a command in the following format: 
 ``` bash
 php quid [path][:envType]
+exemple:
+php quid /en/my-url
+php quid /en/my-url:dev/cms
+php quid /:prod/app
 ```
 
 ## LemurCMS credentials
