@@ -87,7 +87,7 @@ To generate the production build for the Vue application, open the project folde
 npm run prod
 ```
 
-## QuidPHP CLI Routes
+## QuidPHP CLI routes
 Open the project folder in the Command Line. You may now submit a command in the following format: 
 ``` bash
 php quid [path][:envType]
