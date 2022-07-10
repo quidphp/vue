@@ -90,7 +90,7 @@ npm run prod
 ## QuidPHP CLI Routes
 Open the project folder in the Command Line. You may now submit a command in the following format: 
 ``` bash
-**php quid [path][:envType]**
+php quid [path][:envType]
 ```
 
 ## LemurCMS credentials
