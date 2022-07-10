@@ -1,3 +1,6 @@
+// webpack.mix
+// configuration file for laravel-mix
+
 const mix = require('laravel-mix');
 const path = require('path');
 require('laravel-mix-polyfill');

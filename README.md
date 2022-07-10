@@ -75,40 +75,39 @@ Once the installation is complete, simply follow these steps:
 7. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project.
 
 ## Booting via Webpack/HTTP
-Open the project folder in the Command Line.
-
-To start the development server with hot module reload (HMR)
+Open the project folder in the Command Line. To start the development server with hot module reload (HMR) write:
 ``` bash
 npm run hot
 ```
 Your application will be reachable at the defined host within your *env.php* file. A second Node server is also started to serve the HMR requests (defaults to localhost on port 8079). You may need to accept the self-signed certificate for that localhost.
 
-## Booting via CLI
-Open the project folder in the Command Line. You may now submit a command in the following format: **php quid [path][:envType]**.
-
-## Production build
+## Webpack production build
 To generate the production build for the Vue application, open the project folder in the Command Line and write:
 ``` bash
 npm run prod
 ```
 
-## CMS credentials
-Once you open the CMS within your browser, you will need to login. The default user:
+## QuidPHP CLI Routes
+Open the project folder in the Command Line. You may now submit a command in the following format: **php quid [path][:envType]**.
+
+## LemurCMS credentials
+Once you open the CMS within your browser, you will need to login. The default user is:
 - Username: **admin** 
 - Password: **changeme123**
 
 Once you are logged in, you will be able to change the password for the user and create new users.
 
 ## Overview
-**QuidPHP/Project** contains 29 files. Here is an overview:
+**QuidPHP/Project** contains 30 files. Here is an overview:
 - [.gitignore](.gitignore) - Standard .gitignore file for the project
 - [composer.json](composer.json) - File declaring all Composer PHP dependencies
 - [db.sql](db.sql) - Minimal database structure required
 - [env-default.php](env-default.php) - Declare environment data for the application, copy this file and rename to env.php
 - [LICENSE](LICENSE) - MIT License file for the repository
+- [package.json](package.json) - File declaring all NPM dependencies
 - [quid](quid) - File for booting the application and Cms via CLI
 - [README.md](README.md) - This readme file in markdown format
-- [package.json](package.json) - File declaring all NPM dependencies
+- [webpack.mix.js](webpack.mix.js) - Configuration file for laravel-mix
 - [storage/public/favicon.ico](storage/public/favicon.ico) - Generic favicon (16x16), this will be symlinked to *public/favicon.ico*.
 - [public/.htaccess](public/.htaccess) - Simple apache directive file, requires mod_rewrite
 - [public/index.php](public/index.php) - Index file for booting the application and Cms via an HTTP request
