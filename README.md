@@ -88,7 +88,10 @@ npm run prod
 ```
 
 ## QuidPHP CLI Routes
-Open the project folder in the Command Line. You may now submit a command in the following format: **php quid [path][:envType]**.
+Open the project folder in the Command Line. You may now submit a command in the following format: 
+``` bash
+**php quid [path][:envType]**
+```
 
 ## LemurCMS credentials
 Once you open the CMS within your browser, you will need to login. The default user is:
