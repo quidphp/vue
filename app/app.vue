@@ -1,4 +1,4 @@
-<!-- component which loads the correct route -->
+<!-- root component which loads the correct route -->
 <template>
     <component :is="vueRoute" />
 </template>

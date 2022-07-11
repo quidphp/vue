@@ -128,9 +128,9 @@ Once you are logged in, you will be able to change the password for the user and
 - [src/Row/User.php](src/Row/User.php) - Class for a row of the user table
 - [src/Service/Vue.php](src/Service/Vue.php) - Class related to vue and the loading of front-end assets
 - [app/app.scss](app/app.scss) - Main scss stylesheet for the app, injected in the components
-- [app/app.vue](app/app.vue) - Component which loads the correct route
+- [app/app.vue](app/app.vue) - Root component which loads the correct route
 - [app/global.js](app/global.js) - Script which declares some global variables
-- [app/index.js](app/index.js) - Entry file for vue application
+- [app/index.js](app/index.js) - Entry file for the Vue application
 - [app/store.js](app/store.js) - Contains Vuex getters and mutations available globally
 - [app/component/HelloWorld.vue](app/component/HelloWorld.vue) - Component for a hello world in a h1 tag
 - [app/interface/Layout.vue](app/interface/Layout.vue) - Component for the common page layout

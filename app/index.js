@@ -1,5 +1,5 @@
 // index
-// entry file for vue application
+// entry file for the vue application
 
 // import
 import { createApp } from "vue";

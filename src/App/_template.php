@@ -11,7 +11,7 @@ trait _template
     // config
     protected static array $configTemplate = [
         'vue'=>null,
-        'debugVue'=>false,
+        'debugJs'=>false,
         'debugPhp'=>false
     ];
 
@@ -79,7 +79,7 @@ trait _template
             'version'=>$boot->version(true,false),
             'type'=>$boot->type(),
             'timestamp'=>Base\Datetime::now(),
-            'debug'=>$this->shouldDebug('vue'),
+            'debug'=>$this->shouldDebug('js'),
             'navigation'=>static::allowNavigation(),
             'route'=>$this->outputJson()
         ];
