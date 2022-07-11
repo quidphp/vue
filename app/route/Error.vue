@@ -1,6 +1,7 @@
 <!-- component for the error route -->
 <template>
     <InterfaceLayout>
-        <h1>Error</h1>
+        <HelloWorld />
+        <h2>Error</h2>
     </InterfaceLayout>
 </template>

@@ -2,5 +2,6 @@
 <template>
     <InterfaceLayout>
         <HelloWorld />
+        <h2>Home</h2>
     </InterfaceLayout>
 </template>

@@ -13,7 +13,7 @@ class Home extends Site\App\Home
 
     // config
     protected static array $config = [
-        'vue'=>'Home'
+        'component'=>'Home'
     ];
 
 

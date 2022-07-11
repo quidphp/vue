@@ -37,7 +37,7 @@ export default (state) => {
             timestamp: (state) => state.route.timestamp,
             uriRelative: (state) => state.route.uri,
             route: (state) => state.route,
-            vueRoute: (state) => (state.route.vue != null ? 'Route' + state.route.vue : 'RouteError'),
+            vueRoute: (state) => (state.route.component != null ? 'Route' + state.route.component : 'RouteError'),
             com: (state) => state.route.com,
             
             session: (state) => {

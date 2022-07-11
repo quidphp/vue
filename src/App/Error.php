@@ -13,7 +13,7 @@ class Error extends Site\App\Error
 
     // config
     protected static array $config = [
-        'vue'=>'Error'
+        'component'=>'Error'
     ];
 
 

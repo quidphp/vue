@@ -5,13 +5,13 @@
 import { createApp } from "vue";
 import { createStore } from "vuex";
 import StoreConfig from './store.js';
-import "./global.js";
 import App from "./app.vue";
+import "./global.js";
 
 // createApp
 const app = createApp(App);
 
-// components register
+// auto-register components
 const componentsRegister = (prefix, components) => {
     const toPojo = (components) => {
         const r = {};
@@ -35,8 +35,6 @@ const componentsRegister = (prefix, components) => {
         app.component(name, value);
     });
 };
-
-// auto-register components
 const componentVue = require.context('./component', false, /[A-Z]\w+\.(vue|js)$/);
 const interfaceVue = require.context('./interface', false, /[A-Z]\w+\.(vue|js)$/);
 const routeVue = require.context('./route', false, /[A-Z]\w+\.(vue|js)$/);
@@ -60,11 +58,3 @@ app.use(store);
 
 // app mount
 app.mount("#app");
-
-// mutate store
-Quid.Shortcut.ael(document, 'doc:initAjax', function () {
-    store.commit('loadingChange', true);
-});
-Quid.Shortcut.ael(document, 'doc:makeJsonResponse', function (event, json) {
-    store.commit('routeChange', json);
-});

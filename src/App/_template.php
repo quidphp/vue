@@ -10,7 +10,7 @@ trait _template
 {
     // config
     protected static array $configTemplate = [
-        'vue'=>null,
+        'component'=>null,
         'debugJs'=>false,
         'debugPhp'=>false
     ];
@@ -62,10 +62,10 @@ trait _template
     }
 
 
-    // getVue
-    final protected function getVue():string
+    // getComponent
+    final protected function getComponent():string
     {
-        return $this->getAttr('vue',true) ?? static::className(false);
+        return $this->getAttr('component',true) ?? static::className(false);
     }
 
 
@@ -98,7 +98,7 @@ trait _template
 
         $return = [
             'fqcn'=>static::class,
-            'vue'=>$this->getVue(),
+            'component'=>$this->getComponent(),
             'error'=>$error,
             'code'=>Base\Response::code(),
             'timestamp'=>Base\Datetime::now(),
