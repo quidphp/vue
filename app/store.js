@@ -17,11 +17,12 @@ export default (state) => {
             },
 
             routeChange(state, payload) {
-                Quid.Pojo.typecheck(payload);
-                
-                if(state.debug === true) 
-                Quid.Shortcut.d(Quid.Json.recode(payload));
-                
+                Quid.Pojo.typecheck(payload, true);
+
+                if (state.debug === true) {
+                    Quid.Shortcut.d({ ...payload });
+                }
+
                 state.route = payload;
 
                 this.commit('loadingChange', false);
