@@ -1,6 +1,6 @@
 <!-- root component which loads the correct route -->
 <template>
-    <component :is="vueRoute" />
+    <component :is="route" />
 </template>
 
 <script>
@@ -26,8 +26,12 @@ export default {
     },
 
     computed: {
-        vueRoute() {
-            return this.$store.getters.vueRoute
+        isLoading() {
+            return this.$store.getters.isLoading
+        },
+
+        route() {
+            return this.$store.getters.route
         }
     }
 }
