@@ -20,9 +20,7 @@ class Home extends Site\App\Home
     // outputData
     final protected function outputData():array
     {
-        return [
-            'test'=>'ok!!!'
-        ];
+        return [];
     }
 }
 ?>

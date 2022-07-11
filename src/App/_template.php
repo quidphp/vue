@@ -11,7 +11,7 @@ trait _template
     // config
     protected static array $configTemplate = [
         'vue'=>null,
-        'debugVue'=>true,
+        'debugVue'=>false,
         'debugPhp'=>false
     ];
 
