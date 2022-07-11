@@ -6,7 +6,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/quidphp/vue)](https://github.com/quidphp/vue)
 
 ## About
-**QuidPHP/Vue** repository contains the necessary structure to create a new project using QuidPHP, LemurCMS and VueJs.
+**QuidPHP/Vue** repository contains the necessary structure to create a new project using QuidPHP, LemurCMS and Vue.
 
 ## License
 **QuidPHP/Vue** is available as an open-source software under the [MIT license](LICENSE).

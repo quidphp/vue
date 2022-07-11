@@ -1,8 +1,8 @@
 {
     "name": "quidphp/vue",
     "type": "project",
-    "description": "Create a new project using QuidPHP, LemurCMS and VueJs",
-    "keywords": ["quidphp","quid","lemur","lemur cms","framework","cms","vuejs"],
+    "description": "Create a new project using QuidPHP, LemurCMS and Vue",
+    "keywords": ["quidphp","quid","lemur","lemur cms","framework","cms","vue"],
     "homepage": "https://quidphp.com",
     "license": "MIT",
     "authors": [{
